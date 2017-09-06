@@ -1,0 +1,31 @@
+page-orders {
+		.stock {
+			margin-top: 6px;
+			margin-left: 0px;
+			font-size: 18px;
+			font-weight: bold;	
+		}
+
+		.remove {
+			margin-left: -10px;
+		}
+
+		.price {
+			float: right;
+			 margin-left: 10px;
+			 margin-top:  0px;
+			 font-weight: bold;
+		}
+
+		.qty{
+			margin-left: 15px;
+		}
+
+		.decrement {
+			margin-left: -4px;
+		}
+
+		.increment {
+			margin-left: -15px;
+		}
+}

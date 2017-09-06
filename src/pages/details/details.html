@@ -1,0 +1,114 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-buttons start left>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>{{ listing.title}}</ion-title>
+
+   <!--<ion-buttons end>
+    			<button ion-button icon-only>
+    			<ion-icon name="ios-cart" (click)="orders()"></ion-icon> {{total}}
+    			</button>
+    	</ion-buttons>-->
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content >
+
+  <!-- Profile picture -->
+  
+    <img src="{{imageUrl}}" class="edit-avatar" alt="">
+      <input type="hidden"  value="{{imageUrl}}" name="imagen" #ima>
+
+
+
+
+<ion-grid>
+  <ion-row>
+
+ 
+  	 <!--   <ion-col col-1>
+    	<button ion-button icon-only (click)="descrement()">
+        <ion-icon name="ios-remove"></ion-icon>
+      </button>
+          </ion-col>
+            <ion-col col-2>
+       			<h2 class="item_num"> {{ listing.qty}} </h2>
+       		</ion-col>
+       	  <ion-col col-1>
+       	<button ion-button icon-only (click)="increment()">
+        <ion-icon name="ios-add" ></ion-icon>
+      </button>
+    
+    </ion-col >
+     <ion-col col-5>
+  </ion-col>-->
+  
+   	<!--<ion-col col-4>
+   	</ion-col>
+   	     <ion-col col-3>
+         <span style="font-size: 35px;  margin-left: 35px">  <ion-icon name="ios-cart"   (click)="buy(listing, ima)" color="facebook"></ion-icon></span>
+    </ion-col>-->
+  </ion-row>
+  </ion-grid>
+
+  <!--
+  <ion-item padding>
+    <ion-label> 
+      <ion-icon name="clipboard" color="gray"></ion-icon>
+    </ion-label>
+    <ion-input type="text" value="{{ listing.title}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label> 
+      <ion-icon name="quote" color="gray"></ion-icon>
+    </ion-label>
+    <ion-input type="text" value="{{ listing.description}}"></ion-input>
+  </ion-item>
+   -->
+
+
+ <!--  <ion-item>
+    <ion-label>
+      <ion-icon name="ios-cash" color="gray"></ion-icon>
+    </ion-label>
+    <ion-textarea placeholder="" value="{{ listing.price}}"></ion-textarea>
+  </ion-item>-->
+
+  <!-- Private information form -->
+ <!-- <div margin-top padding-top padding>
+    <h4 no-margin no-padding class="info-text">Private Information</h4>
+    <hr class="custom-hr" color="gray">
+  </div>
+  
+  <!-- <ion-item>
+    <ion-label> 
+      <ion-icon name="mail" color="gray"></ion-icon>
+    </ion-label>
+    <ion-input type="text" [value]="user_data.email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label> 
+      <ion-icon name="phone-portrait" color="gray"></ion-icon>
+    </ion-label>
+    <ion-input type="text" [value]="user_data.phone" placeholder="Add your phone"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      <ion-icon name="transgender" color="gray"></ion-icon>
+    </ion-label>
+    <ion-select class="custom-select" [(ngModel)]="user_data.gender">
+      <ion-option value="male">Male</ion-option>
+      <ion-option value="female">Female</ion-option>
+      <ion-option value="none">Not Specified</ion-option>
+    </ion-select>
+  </ion-item> -->
+
+</ion-content>

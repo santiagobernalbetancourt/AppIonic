@@ -1,0 +1,79 @@
+<ion-header>
+ <ion-navbar color="primary">
+    <ion-title>
+     CheckOut
+    </ion-title>
+    	<ion-buttons end>
+    			<button ion-button icon-only>
+    			 <ion-icon name="person-add"></ion-icon>
+    			</button>
+    	</ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+<ion-list>
+  <ion-item  *ngFor="let listing of orders_list" >
+
+
+
+    
+      
+
+     <ion-row>
+      <ion-col col-8>
+    <p>{{listing.title}} </p>
+    <p>{{listing.description}}</p>
+     <p class="stock" *ngIf="listing.qty">Qty: {{listing.qty}}</p>
+      </ion-col>
+
+    <ion-col col-2>
+     
+      <h2 class="price" *ngIf="listing.order_price" >$ {{listing.order_price}}</h2>
+    </ion-col>
+
+
+  
+  </ion-row>
+    
+
+  
+
+  
+
+  
+   
+  </ion-item>
+</ion-list>
+</ion-content>
+
+<ion-footer >
+  <ion-toolbar color="secondary">
+
+   <ion-row>
+      <ion-col col-3>
+    
+    </ion-col>
+    <ion-col col-6>
+     <div class="qty" >Total: $ {{suma}}  </div> 
+    </ion-col>
+     <ion-col col-2>
+    
+    </ion-col>
+    </ion-row>
+
+     <ion-row>
+    <ion-col col-6>
+        <button ion-button round class="reverse" color="remove" (click)="onReverse(orders_list)"> Reverse &nbsp;  <ion-icon name="remove-circle"></ion-icon>
+		</button>
+    </ion-col>
+     <ion-col col-6>
+        <button ion-button round class="confirm" (click)="onCheckout(orders_list)"> Confirm &nbsp;  <ion-icon name="checkmark-circle"></ion-icon>
+		</button>
+    </ion-col>
+       
+    </ion-row>
+    
+    
+  </ion-toolbar>
+</ion-footer>

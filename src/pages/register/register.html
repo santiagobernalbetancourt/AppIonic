@@ -1,0 +1,28 @@
+<ion-content class="background">
+
+    <ion-card>
+
+        <ion-card-header>
+            <img src="./assets/fire.png" style="margin-left: 70px; width: 180px; height: 175px; position: relative;">
+        </ion-card-header>
+        <ion-card-content>
+            <ion-list no-line>
+
+                <ion-item>
+                    <ion-input type="text" [(ngModel)]="user.email" placeholder="Email"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-input type="password" [(ngModel)]="user.password" placeholder="Password"></ion-input>
+                </ion-item>
+            
+                <button ion-button block outline color="light" (tap)="register(user)">Registrar</button>
+
+
+             
+    
+            </ion-list>
+
+        </ion-card-content>
+    </ion-card>
+   	   <button class="bottom"  ion-button clear full (click)="goBack()">Regresar a Principal</button>
+</ion-content>

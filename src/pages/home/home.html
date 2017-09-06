@@ -1,14 +1,73 @@
 <ion-header>
-  <ion-navbar>
+ <ion-navbar color="dark">
     <ion-title>
-      Ionic Blank
     </ion-title>
+    <!--	<ion-buttons end>
+    			<button ion-button icon-only (click)="orders()">
+    			<ion-icon name="ios-cart" ></ion-icon> {{total}}
+    			</button>
+    	</ion-buttons>-->
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-content>
+    
+    <ion-grid>
+            <ion-row>
+                <ion-col col-4 col-md-4 col-xl-4 *ngFor="let item of arreglo">
+                 <img src="{{item.image}}" (click)="details(item)"/>
+                 <div class="card-subtitle">{{item.description}}</div><br>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    
+   
+   
+
 </ion-content>
+
+<!--
+<table style="width:100%">
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th> 
+      <th>Age</th>
+    </tr>
+    <tr>
+      <td>Jill</td>
+      <td>Smith</td> 
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Eve</td>
+      <td>Jackson</td> 
+      <td>94</td>
+    </tr>
+  </table>
+-->
+
+<!--
+ion-content padding>
+<ion-segment [(ngModel)]= "galleryType"># 
+<ion-segment-button value="regular">
+Regular
+</ion-segment-button>
+<ion-segment-button value="pinterest">
+    Pinteres
+</ion-segment-button>
+</ion-segment>
+
+<div [ngSwitch]="galleryType">
+
+<ion-grid *ngSwitchCase="'regular'">
+    <ion-row>
+        <ion-col  col-6 col-md-4 col-xl-3 *ngFor="let item of arreglo">
+         <img src="{{item.image}}" (click)="details(item)"/>
+        </ion-col>
+    </ion-row>
+</ion-grid>
+</div>
+
+</ion-content>
+
+-->

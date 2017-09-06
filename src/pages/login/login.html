@@ -1,0 +1,30 @@
+<ion-content class="background">
+
+    <ion-card>
+
+        <ion-card-header>
+            <img src="./assets/logofire.png" style="margin-left: 90px; width: 135px; height: 140px; position: relative;">
+        </ion-card-header>
+        <ion-card-content>
+            <ion-list no-line>
+
+                <ion-item>
+                    <ion-input type="text" [(ngModel)]="user.email" placeholder="Username"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-input type="password" [(ngModel)]="user.password" placeholder="Password"></ion-input>
+                </ion-item>
+                
+                <!--<a>Olvido su clave? <b>Obtenga ayuda aqui!</b></a> -->
+
+                <button ion-button block outline color="light" (tap)="login(user)">Log in</button>
+
+                <button ion-button block color="facebook" (tap)="loginFacebook()"> 
+                <ion-icon name="logo-facebook"></ion-icon> Login with facebook
+            </button>
+            </ion-list>
+
+        </ion-card-content>
+    </ion-card>
+    <button class="bottom" ion-button clear full color="light" (click)="goRegister()">Register</button>
+</ion-content>
